@@ -1,0 +1,25 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!--><html {{ site.language_attributes }}> <!--<![endif]-->
+
+{% include 'partial/head.twig' %}
+
+<body>
+
+  {% include 'partial/header.twig' %}
+
+  <main>
+    {% block content %}
+      Sorry, no content
+    {% endblock %}
+  </main>
+
+  {% include 'partial/footer.twig' %}
+
+  <script src="{{ site.theme.link }}/static/js/app.js"></script>
+  
+  {# {{ function('wp_footer') }} #}
+
+</body>
+</html>

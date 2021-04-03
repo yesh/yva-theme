@@ -1,0 +1,16 @@
+<div class="accordion">
+  {% for item in items %}
+
+    <article class="accordion-item">
+      <header class="accordion-item__head">
+        <p>{{ item.title }}</p>
+      </header>
+      <div class="accordion-item__content">
+        <div>
+          {{ item.content }}
+        </div>
+      </div>
+    </article>
+
+  {% endfor %}
+</div>

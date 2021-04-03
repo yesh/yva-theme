@@ -1,0 +1,37 @@
+.accordion
+  &-item
+    &__head
+      position: relative
+      display: block
+      cursor: pointer
+      padding: 1rem 0
+
+      &::after
+        content: ''
+        width: 2.4rem
+        height: 2.4rem
+        display: block
+        position: absolute
+        right: 1rem
+        top: 1rem
+        background-color: $c-brand
+        background-image: url()
+        background-position: center center
+        background-size: contain
+        background-repeat: no-repeat
+        transform-origin: center center
+        transition: transform $transition-default
+    
+    &__content
+      height: 0
+      overflow: hidden
+      border-bottom: 1px solid $c-border
+
+      > div
+        padding: 1rem
+  
+    &.is-open
+      .accordion-item
+        &__head
+          &::after
+            transform: rotate(135deg)

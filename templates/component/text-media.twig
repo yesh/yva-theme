@@ -1,0 +1,34 @@
+<section class="section text-media{{ classes ? " #{ classes }" }}">
+  <div class="text-media__inner">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-12 col-lg-6">
+          <div class="text-media__text">
+            <h1>{{ title }}</h1>
+            {% if content %}
+              <div class="text-media__text">
+                {{ content }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if video or image %}
+          <div class="col-12 col-lg-6">
+            <div class="text-media__media">
+              {% if video %}
+                {% include 'component/video.twig' with { video: video } %}
+              {% endif %}
+
+              {% if image %}
+                {% include 'component/image.twig' with { image: image } %}
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</section>
