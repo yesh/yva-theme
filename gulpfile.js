@@ -29,7 +29,7 @@ let location = {
   sources: {
     jsVendors: [
       'node_modules/gsap/dist/gsap.js',
-      'node_modules/gsap/dist/ScrollToPlugin.js',
+      'node_modules/gsap/dist/ScrollTrigger.js',
       config.srcPath + 'js/vendor/*.js'
     ],
     jsApp: config.srcPath + 'js/*.js',

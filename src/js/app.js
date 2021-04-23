@@ -4,7 +4,3 @@ gsap.defaults({
 })
 
 const main = document.querySelector('main')
-
-window.addEventListener('load', () => {
-  gsap.to(main, { autoAlpha: 1, duration: .12 })
-})
