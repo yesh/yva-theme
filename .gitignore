@@ -2,3 +2,5 @@ node_modules/
 static/css/
 static/js/
 static/svg/
+
+.DS_Store

@@ -1,5 +1,5 @@
 const { series, parallel, src, dest, watch } = require('gulp'),
-      sass = require('gulp-sass'),
+      sass = require('gulp-sass')(require('sass')),
       concat = require('gulp-concat'),
       merge2 = require('merge2'),
       sourcemaps = require('gulp-sourcemaps'),
@@ -11,7 +11,6 @@ const { series, parallel, src, dest, watch } = require('gulp'),
       svgmin = require('gulp-svgmin'),
       through2 = require('through2'),
       log = require('fancy-log'),
-      beeper = require('beeper'),
       minimist = require('minimist')(process.argv.slice(2));
 
 const config = {
@@ -59,7 +58,6 @@ function js() {
       src(location.sources.jsApp)
         .pipe(eslint())
         .pipe(eslint.format())
-        // .pipe(jshint.reporter('jshint-stylish'), { beep: true })
         .pipe(babel({
           "presets": [["@babel/preset-env"]]
         }))
@@ -96,7 +94,6 @@ function w() {
 }
 
 function handleError(err) {
-  beeper(2);
   log.error('\n\n' + '  |   Error: ' + err.messageOriginal + ' /// line: ' + err.line + '/' + err.column + '\n' + '  |   In file: ' + err.file + '\n');
   this.emit('end');
 }
