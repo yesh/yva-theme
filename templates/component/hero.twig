@@ -1,11 +1,17 @@
 <section class="section hero{{ classes ? " #{ classes }" }}">
-  <div class="container">
-    <div class="row">
 
-      <div class="col-12 col-lg-7">
-        
+  <div class="hero__canvas">
+    <div class="hero__caption">
+      <div>
+        <h1>{{ data.title }}</h1>
+        <h3>{{ data.subtitle }}</h3>
       </div>
+    </div>
 
+    <div class="hero__curtain"></div>
+
+    <div class="hero__media">
+      <video src="{{ data.video }}" width="1920" height="1080" muted loop autoplay></video>
     </div>
   </div>
 
