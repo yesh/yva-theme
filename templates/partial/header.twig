@@ -1,11 +1,15 @@
 <header class="header">
   <div class="header__inner">
-    <a href="{{ site.link }}" class="logo">
-      <img src="{{ site.theme.link }}/static/svg/logo-deepcloud.svg" alt="DeepCloud">
-    </a>
-    {# <div class="col-auto">
-      {% include "component/menu.twig" %}
-      <button class="hamburger"><span class="span"></span><span class="span"></span><span class="span"></span></button>
-    </div> #}
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-auto">
+          <a href="{{ site.link }}" class="logo">Logo</a>
+        </div>
+        <div class="col-auto">
+          {% include "component/menu.twig" %}
+          <button class="hamburger"><span class="span"></span><span class="span"></span><span class="span"></span></button>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

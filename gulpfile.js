@@ -74,16 +74,9 @@ const svg = () => {
       svgmin({
         plugins: [
           {
-            name: 'removeViewBox',
-            active: false,
-          },
-          {
-            name: 'convertStyleToAttrs',
-            active: false,
-          },
-          {
-            name: 'cleanupIDs',
-            active: false,
+            removeViewBox: false,
+            convertStyleToAttrs: false,
+            cleanupIDs: false,
           },
         ],
       })
